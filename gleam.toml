@@ -1,0 +1,20 @@
+name = "d1_gleamflare"
+version = "1.0.0"
+target = "erlang"
+
+description = "A modern, type-safe Gleam library to integrate with the Cloudflare D1 REST API."
+licences = ["Apache-2.0"]
+repository = { type = "github", user = "juliocabrera820", repo = "d1-gleamflare" }
+
+links = [
+  { title = "GitHub", href = "https://github.com/juliocabrera820/d1-gleamflare" }
+]
+
+[dependencies]
+gleam_stdlib = ">= 0.38.0 and < 0.41.0"
+gleam_http = ">= 3.0.0 and < 4.0.0"
+gleam_httpc = ">= 2.0.0 and < 3.0.0"
+gleam_json = ">= 1.0.0 and < 2.0.0"
+
+[dev-dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
