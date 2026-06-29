@@ -1,5 +1,11 @@
 # d1_gleamflare
 
+[![Hex Package](https://img.shields.io/hexpm/v/d1_gleamflare.svg)](https://hex.pm/packages/d1_gleamflare)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/d1_gleamflare/)
+[![License](https://img.shields.io/hexpm/l/d1_gleamflare)](https://github.com/juliocabrera820/d1-gleamflare/blob/main/LICENSE)
+[![Gleam](https://img.shields.io/badge/gleam-%3E%3D%201.3.0-FFAFF3)](https://gleam.run)
+[![Target](https://img.shields.io/badge/target-erlang-B83998?logo=erlang)](https://www.erlang.org/)
+
 A modern, type-safe Gleam library to integrate with the Cloudflare D1 REST API. Specifically built to target the Erlang VM (BEAM) using `gleam_httpc`.
 
 ## Installation
@@ -8,7 +14,7 @@ Add `d1_gleamflare` to your `gleam.toml` dependencies:
 
 ```toml
 [dependencies]
-d1_gleamflare = ">= 0.1.0"
+d1_gleamflare = ">= 1.0.3"
 ```
 
 ## Quick Start
@@ -20,10 +26,7 @@ To interact with the Cloudflare API, you need your Cloudflare Account ID and a C
 ```gleam
 import d1_gleamflare
 
-let client = d1_gleamflare.new(
-  account_id: "your-account-id",
-  api_token: "your-api-token",
-)
+let client = d1_gleamflare.new("your-account-id", "your-api-token")
 ```
 
 ### 2. Manage Databases (Account-Level)
@@ -74,7 +77,7 @@ fn user_decoder() {
 
 // Execute SELECT query
 let sql = "SELECT id, name, email FROM users WHERE active = ? AND age >= ?"
-let params = [json.bool(true), json.int(21)]
+let params = [json.bool(True), json.int(21)]
 
 let assert Ok(query_result) = 
   db

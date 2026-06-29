@@ -4,7 +4,7 @@ import gleam/json
 import gleam/dynamic.{type Decoder, type Dynamic}
 import gleam/option.{type Option}
 import gleam/list
-import d1_gleamflare/types.{type Database, type Query, type QueryMeta, type QueryResult, Database, Query, QueryMeta, QueryResult}
+import d1_gleamflare/types.{type Database, type Query, type QueryMeta, type QueryResult, QueryMeta, QueryResult}
 import d1_gleamflare/internal
 
 pub fn query_to_json(q: Query) -> json.Json {

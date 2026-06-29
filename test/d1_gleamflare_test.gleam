@@ -3,7 +3,7 @@ import gleam/dynamic
 import gleam/json
 import gleam/option.{Some, None}
 import d1_gleamflare
-import d1_gleamflare/types.{type Query, Query, CloudflareApiError}
+import d1_gleamflare/types.{Query, CloudflareApiError}
 import d1_gleamflare/internal
 import d1_gleamflare/database
 
